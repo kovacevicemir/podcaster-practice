@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
@@ -24,11 +24,15 @@ const LeftSidebar = () => {
           </h1>
         </Link>
         {sidebarLinks.map(({ route, label, imgURL }) => {
-          const isActive = pathname === route || pathname.startsWith(`${route}`)
+          const isActive =
+            pathname === route || pathname.startsWith(`${route}/`);
 
           return (
             <Link
-              className={cn("flex gap-3 items-center py-4 max-lg:px-4 justify-center lg:justify-start",{'bg-nav-focus border-r-4 border-orange-1':isActive})}
+              className={cn(
+                "flex gap-3 items-center py-4 max-lg:px-4 justify-center lg:justify-start",
+                { "bg-nav-focus border-r-4 border-orange-1": isActive }
+              )}
               key={label}
               href={route}
             >
