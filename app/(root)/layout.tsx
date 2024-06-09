@@ -1,4 +1,5 @@
 import LeftSidebar from "@/components/LeftSidebar";
+import RightSidebar from "@/components/RightSidebar";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 
@@ -20,9 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manrope.className}`}>
-        <LeftSidebar/>
+        <LeftSidebar />
         {children}
-        <p className="text-white-1">Right Side</p>
+        <RightSidebar />
       </body>
     </html>
   );
